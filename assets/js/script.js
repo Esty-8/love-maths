@@ -9,16 +9,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("clicked Submit")
             }  else {
                 let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`)
+                runGame(gameType);
             }
         })
     }
+
+    runGame("addition");
 })
 
 /** The main game 'loop', called when the script is first laded
  * and after the user's answer has been processed
  */
-function runGame() {
+function runGame(gameType) {
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
 }
